@@ -1,13 +1,43 @@
+<!DOCTYPE html>
 <html>
-<title>This is sample hello world example</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>This is sample hello world example</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/style.css" />
+</head>
 
 <body>
-    <p> Hello World!!!</p>
-</body>
 
-<!-- Example of recommended script positioning -->
-<!-- This code has a single <script> tag at the bottom of the page that loads multiple JavaScript files, 
+    <div class="container">
+
+
+        <div class="starter-template">
+            <h1>This is sample hello world example</h1>
+            <p class="lead">Hello World!!!</p>
+        </div>
+
+        <button class="btn btn-default" onclick="btnClick()">Abc</button>
+    </div>
+    <!-- /.container -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Custom script -->
+    <script type="text/javascript" src="/helloworld/script.js"></script>
+
+    <!-- Example of recommended script positioning -->
+    <!-- This code has a single <script> tag at the bottom of the page that loads multiple JavaScript files, 
 showing the best practice for including external JavaScript on an HTML page.-->
-<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.7.0/build/yahoo/yahoo-min.js&2.7.0/build/event/event-min.js "></script>
+    <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.7.0/build/yahoo/yahoo-min.js&2.7.0/build/event/event-min.js "></script>
+</body>
 
 </html>

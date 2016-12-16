@@ -1,0 +1,24 @@
+{
+  "name": "patternsandsamples",
+  "version": "1.0.0",
+  "description": "Pattern And Samples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekgoenka/Patterns-and-Samples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishekgoenka/Patterns-and-Samples/issues"
+  },
+  "homepage": "https://github.com/abhishekgoenka/Patterns-and-Samples#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}
