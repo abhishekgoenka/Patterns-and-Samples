@@ -7,6 +7,12 @@ Download all the packages using following commands before you start
 
 >bower update
 
+Analyzing source with JSHint and JSCS
+>gulp vet
+
+Analyzing source with JSHint and JSCS (shows verbose output)
+>gulp vet --verbose
+
 ## HelloWorld
 This is the test project to try examples. Use following command to browse
 >gulp helloworld

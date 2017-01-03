@@ -1,21 +1,22 @@
 // self-executing anonymous function
 (function () {
-    console.log("self-executing anonymous function");
+    console.log('self-executing anonymous function');
     registerEvents();
 
     //register events
     function registerEvents() {
-        $("#btnExecuteLoop").click(btnExecuteLoop_Click)
+        $('#btnExecuteLoop').click(btnExecuteLoopClick);
     }
 
-    function btnExecuteLoop_Click() {
-        var iterationcount = parseInt($("#iterationcount").val());
+    function btnExecuteLoopClick() {
+        var iterationcount = parseInt($('#iterationcount').val());
         if (isNaN(iterationcount)) {
-            console.warn($("#iterationcount").val() + " value is not a number")
+            console.warn($('#iterationcount').val() + ' value is not a number');
         }
         else {
-            var TIMER_NAME_DUFF_DEVICE = "Duff\'s Device Algorithm";
-            var TIMER_NAME_WHILE_LOOP = "While loop";
+            console.log('No of iterations ' + iterationcount);
+            var TIMER_NAME_DUFF_DEVICE = 'Duff\'s Device Algorithm';
+            var TIMER_NAME_WHILE_LOOP = 'While loop';
 
             //Duff's Device Algorithm performance
             console.time(TIMER_NAME_DUFF_DEVICE);
@@ -24,11 +25,9 @@
 
             //While loop performance
             console.time(TIMER_NAME_WHILE_LOOP);
-            duffsDevice(iterationcount);
+            iterateUsingForLoop(iterationcount);
             console.timeEnd(TIMER_NAME_WHILE_LOOP);
         }
-
-        console.log('Iterate using Duff\'s Device Algorithm button clicked!!!');
     }
 
     /**
@@ -49,6 +48,7 @@
         //n = Math.floor(iterations / 8);
 
         //Approach #2 : multiplication is faster than division in some cases and `XOR 0` removes decimal digits
+        /* jshint -W016 */
         n = (iterations * 0.125) ^ 0; 
 
         if (n > 0) {  // if iterations < 8 an infinite loop, added for safety in second printing
@@ -66,7 +66,7 @@
         }
     }
 
-    function iterate_using_for_loop(iterations) {
+    function iterateUsingForLoop(iterations) {
         var testVal = 0;
         do {
             testVal++;

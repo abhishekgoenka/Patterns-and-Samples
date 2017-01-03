@@ -1,8 +1,8 @@
 function btnClick(){
     var data = {
-        "name" : "Abhishek Goenka",
-        "Education" : "M.SC. IT"
+        'name' : 'Abhishek Goenka',
+        'Education' : 'M.SC. IT'
     };
 
-    alert(data);
+    console.log(data);
 }
