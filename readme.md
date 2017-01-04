@@ -26,5 +26,9 @@ Make sure you confirm that the Duff’s device really improves the performance, 
 
 >gulp duffdevice
 
+## Gulp Sample Code
+The project is a simple one-page HTML website. However, by setting this code up together, it helps to demonstrate various gulp tasks. [Go inside the project for more details.]()
+
+
 ## License
 MIT license
