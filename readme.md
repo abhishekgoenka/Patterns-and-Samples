@@ -27,7 +27,7 @@ Make sure you confirm that the Duff’s device really improves the performance, 
 >gulp duffdevice
 
 ## Gulp Sample Code
-The project is a simple one-page HTML website. However, by setting this code up together, it helps to demonstrate various gulp tasks. [Go inside the project for more details.]()
+The project is a simple one-page HTML website. However, by setting this code up together, it helps to demonstrate various gulp tasks. [Go inside the project for more details.](https://github.com/abhishekgoenka/Patterns-and-Samples/tree/master/GulpSampleCode)
 
 
 ## License
