@@ -12,11 +12,20 @@ Download all the packages using following commands before you start
 
 >bower update
 
-Analyzing source with JSHint and JSCS
->gulp vet
+Build source
+>gulp build
 
-Analyzing source with JSHint and JSCS (shows verbose output)
->gulp vet --verbose
+Build and Run. Server will be listening at port 8080. Browse _http://localhost:8080_ to view the changes
+>gulp
+
+Following gulp plugins are used
+* gulp-concat : Concatenates files
+* gulp-uglify : Minify files with UglifyJS.
+* gulp-myth : Myth - Postprocessor that polyfills CSS
+* gulp-jshint : JSHint plugin for gulp
+* gulp-imagemin : Minify PNG, JPEG, GIF and SVG images
+* gulp-plumber : Gulp-plumber was created as a stop-gap to give us more control over handling errors in our tasks.
+* gulp-sourcemaps : will allow us to view the unbuilt versions of our code in the browser so that we can properly debug it.
 
 ## License
 MIT license

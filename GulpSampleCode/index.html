@@ -2,23 +2,42 @@
 <html lang="en">
 
 <head>
-    <title>Gulp Book Project</title>
+    <title>Gulp Task Example</title>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, height=deviceheight, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="A simple one-page website to demonstrate gulp." />
     <meta name="keywords" content="gulp, book, example" />
     <meta name="robots" content="index, follow" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
     <link rel="stylesheet" href="dist/all.css" /> </head>
 
 <body>
     <div id="core">
-        <div class="box"> <img src="dist/img/gulp.png" alt="Gulp Logo" class="gulp-logo">
-            <h1>Gulp Book Example</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat atque unde doloremque illo, voluptatibus repellendus iusto, praesentium officia necessitatibus consectetur blanditiis neque eveniet accusamus dolorum labore iure vel, tempora odio.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dignissimos commodi minus sint animi itaque praesentium, natus vel eaque, molestias sequi modi quaerat aliquam in, quisquam quos, impedit maiores ratione!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ut possimus, repellat vero modi, aliquam pariatur deserunt voluptas quam omnis maiores eveniet quo ipsam totam quasi recusandae, rem sit deleniti.</p>
+        <div class="box">
+            <img src="dist/img/gulp.png" alt="Gulp Logo" class="gulp-logo">
+            <h1>Gulp Task Example</h1>
+            <p>This sample uses following tasks</p>
+            <ul>
+                <li>gulp-concat : Concatenates files</li>
+                <li>gulp-uglify : Minify files with UglifyJS.</li>
+                <li>gulp-myth : Myth - Postprocessor that polyfills CSS</li>
+                <li>gulp-jshint : JSHint plugin for gulp</li>
+                <li>gulp-imagemin : Minify PNG, JPEG, GIF and SVG images</li>
+                <li>gulp-plumber : Gulp-plumber was created as a stop-gap to give us more control over handling errors in our tasks.</li>
+                <li>gulp-sourcemaps : will allow us to view the unbuilt versions of our code in the browser so that we can properly debug it.</li>
+            </ul>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="dist/all.js"></script>
 </body>
 
