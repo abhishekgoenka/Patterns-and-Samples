@@ -1,76 +1,79 @@
 ﻿using System;
 
-/// <summary>
-/// Abstract Factory : 
-/// Provide an interface for creating families of related or dependent objects without 
-/// specifying their concrete classes
-/// </summary>
-public class AbstractFactory
+namespace DesignPattern
 {
-    public enum UISkillSet {  DotNet, Java };
-    public enum DBSkillSet {  MSSQL, MySQL };
-
-    void Main(string[] args)
+    /// <summary>
+    /// Abstract Factory : 
+    /// Provide an interface for creating families of related or dependent objects without 
+    /// specifying their concrete classes
+    /// </summary>
+    public class AbstractFactory
     {
-        IBaseFactory baseFactory = new ProjectA(UISkillSet.DotNet, DBSkillSet.MSSQL);
-        Console.WriteLine(baseFactory.GetUITeam().GetTeam());
+        public enum UISkillSet {  DotNet, Java };
+        public enum DBSkillSet {  MSSQL, MySQL };
 
-        Console.ReadKey();
-    }
-
-    public interface IBaseFactory
-    {
-        ITeamFactory GetUITeam();
-        ITeamFactory GetDBTeam();
-    }
-
-    public interface ITeamFactory
-    {
-        String GetTeam();
-    }
-
-    public class ProjectA : IBaseFactory
-    {
-        private readonly UISkillSet UISkillSet;
-        private readonly DBSkillSet DBSkillSet;
-
-        public ProjectA(UISkillSet UISkillSet, DBSkillSet DBSkillSet)
+        void Main(string[] args)
         {
-            this.UISkillSet = UISkillSet;
-            this.DBSkillSet = DBSkillSet;
+            IBaseFactory baseFactory = new ProjectA(UISkillSet.DotNet, DBSkillSet.MSSQL);
+            Console.WriteLine(baseFactory.GetUITeam().GetTeam());
+
+            Console.ReadKey();
         }
-        public ITeamFactory GetUITeam()
+
+        public interface IBaseFactory
         {
-            switch (UISkillSet)
+            ITeamFactory GetUITeam();
+            ITeamFactory GetDBTeam();
+        }
+
+        public interface ITeamFactory
+        {
+            String GetTeam();
+        }
+
+        public class ProjectA : IBaseFactory
+        {
+            private readonly UISkillSet UISkillSet;
+            private readonly DBSkillSet DBSkillSet;
+
+            public ProjectA(UISkillSet UISkillSet, DBSkillSet DBSkillSet)
             {
-                case UISkillSet.DotNet:
-                    return new DotNetTeam();
-                case UISkillSet.Java:
-                    return new JavaTeam();
-                default:
-                    throw new IndexOutOfRangeException();
+                this.UISkillSet = UISkillSet;
+                this.DBSkillSet = DBSkillSet;
+            }
+            public ITeamFactory GetUITeam()
+            {
+                switch (UISkillSet)
+                {
+                    case UISkillSet.DotNet:
+                        return new DotNetTeam();
+                    case UISkillSet.Java:
+                        return new JavaTeam();
+                    default:
+                        throw new IndexOutOfRangeException();
+                }
+            }
+
+            public ITeamFactory GetDBTeam()
+            {
+                throw new NotImplementedException();
             }
         }
 
-        public ITeamFactory GetDBTeam()
+        public class DotNetTeam : ITeamFactory
         {
-            throw new NotImplementedException();
+            public string GetTeam()
+            {
+                return "DotNet Team";
+            }
         }
-    }
 
-    public class DotNetTeam : ITeamFactory
-    {
-        public string GetTeam()
+        public class JavaTeam : ITeamFactory
         {
-            return "DotNet Team";
-        }
-    }
-
-    public class JavaTeam : ITeamFactory
-    {
-        public string GetTeam()
-        {
-            return "Java Team";
+            public string GetTeam()
+            {
+                return "Java Team";
+            }
         }
     }
 }

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AbstractFactory.cs" />
     <Compile Include="Adapter.cs" />
+    <Compile Include="Bridge.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
