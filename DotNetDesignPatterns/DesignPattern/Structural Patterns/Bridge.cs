@@ -1,17 +1,18 @@
 ﻿using System;
 
-namespace DesignPattern
+namespace DesignPattern.Structural_Patterns
 {
     /// <summary>
-    /// Bridge Design Pattern - Decouple an abstraction from its implementation so that the two can vary independently.
+    ///     Bridge Design Pattern - Decouple an abstraction from its implementation so that the two can vary independently.
     /// </summary>
     public class Bridge
     {
         /// <summary>
-        /// Entry point into console application.
+        ///     Entry point into console application.
         /// </summary>
-        static void Main()
+        public void Execute()
         {
+            Console.WriteLine("================== Start Bridge Pattern ======================");
             Abstraction ab = new RefinedAbstraction();
 
             // Set implementation and call
@@ -22,21 +23,20 @@ namespace DesignPattern
             ab.Implementor = new ConcreteImplementorB();
             ab.Operation();
 
-            // Wait for user
-            Console.ReadKey();
+            Console.WriteLine("================== End Bridge Pattern ======================");
         }
 
         /// <summary>
-        /// The 'Abstraction' class
+        ///     The 'Abstraction' class
         /// </summary>
-        class Abstraction
+        private class Abstraction
         {
             protected Implementor implementor;
 
             // Property
             public Implementor Implementor
             {
-                set { implementor = value; }
+                set => implementor = value;
             }
 
             public virtual void Operation()
@@ -46,17 +46,17 @@ namespace DesignPattern
         }
 
         /// <summary>
-        /// The 'Implementor' abstract class
+        ///     The 'Implementor' abstract class
         /// </summary>
-        abstract class Implementor
+        private abstract class Implementor
         {
             public abstract void Operation();
         }
 
         /// <summary>
-        /// The 'RefinedAbstraction' class
+        ///     The 'RefinedAbstraction' class
         /// </summary>
-        class RefinedAbstraction : Abstraction
+        private class RefinedAbstraction : Abstraction
         {
             public override void Operation()
             {
@@ -65,9 +65,9 @@ namespace DesignPattern
         }
 
         /// <summary>
-        /// The 'ConcreteImplementorA' class
+        ///     The 'ConcreteImplementorA' class
         /// </summary>
-        class ConcreteImplementorA : Implementor
+        private class ConcreteImplementorA : Implementor
         {
             public override void Operation()
             {
@@ -76,9 +76,9 @@ namespace DesignPattern
         }
 
         /// <summary>
-        /// The 'ConcreteImplementorB' class
+        ///     The 'ConcreteImplementorB' class
         /// </summary>
-        class ConcreteImplementorB : Implementor
+        private class ConcreteImplementorB : Implementor
         {
             public override void Operation()
             {

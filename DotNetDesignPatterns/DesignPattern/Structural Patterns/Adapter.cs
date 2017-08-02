@@ -1,20 +1,22 @@
 ﻿using System;
 
-namespace DesignPattern
+namespace DesignPattern.Structural_Patterns
 {
     /// <summary>
-    /// Convert the interface of a class into another interface clients expect. 
-    /// Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
+    ///     Convert the interface of a class into another interface clients expect.
+    ///     Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
     /// </summary>
     public class AdapterPattern
     {
         /// <summary>
-        /// Entry point into console application.
+        ///     Entry point into console application.
         /// </summary>
-        void Main()
+        public void Execute()
         {
+            Console.WriteLine("================== Start Adapter Pattern ======================");
+
             // Showing the Adapteee in standalone mode
-            Adaptee first = new Adaptee();
+            var first = new Adaptee();
             Console.Write("Before the new standard\nPrecise reading: ");
             Console.WriteLine(first.SpecificRequest(5, 3));
 
@@ -22,6 +24,8 @@ namespace DesignPattern
             ITarget second = new Adapter();
             Console.WriteLine("\nMoving to the new standard");
             Console.WriteLine(second.Request(5));
+
+            Console.WriteLine("================== End Adapter Pattern   ======================");
         }
 
         // Existing way requests are implemented
@@ -35,7 +39,7 @@ namespace DesignPattern
         }
 
         // Required standard for requests
-        interface ITarget
+        private interface ITarget
         {
             // Rough estimate required
             string Request(int i);
@@ -46,9 +50,8 @@ namespace DesignPattern
         {
             public string Request(int i)
             {
-                return "Rough estimate is " + (int)Math.Round(SpecificRequest(i, 3));
+                return "Rough estimate is " + (int) Math.Round(SpecificRequest(i, 3));
             }
         }
     }
 }
-

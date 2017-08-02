@@ -43,13 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractFactory.cs" />
-    <Compile Include="Adapter.cs" />
-    <Compile Include="Bridge.cs" />
+    <Compile Include="Creational Patterns\AbstractFactory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Structural Patterns\Adapter.cs" />
+    <Compile Include="Structural Patterns\Bridge.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Creational Patterns\Prototype.cs" />
+    <Compile Include="Structural Patterns\ProxyPattern.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Class Diagrams\Creational Patterns\prototype.gif" />
+    <Content Include="Class Diagrams\Structural Patterns\Bridge.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
