@@ -18,6 +18,14 @@ namespace DesignPattern
             PrototypePattern prototypePattern = new PrototypePattern();
             prototypePattern.Execute();
 
+            //Builder
+            BuilderPattern builderPattern = new BuilderPattern();
+            builderPattern.Execute();
+
+            //factory
+            FactoryPattern factoryPattern = new FactoryPattern();
+            factoryPattern.Execute();
+
             #endregion
 
             #region Structural Patterns

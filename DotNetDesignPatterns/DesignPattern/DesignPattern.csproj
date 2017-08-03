@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Creational Patterns\AbstractFactory.cs" />
+    <Compile Include="Creational Patterns\BuilderPattern.cs" />
+    <Compile Include="Creational Patterns\FactoryPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Structural Patterns\Adapter.cs" />
     <Compile Include="Structural Patterns\Bridge.cs" />
@@ -56,8 +58,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Class Diagrams\Creational Patterns\builder.gif" />
+    <Content Include="Class Diagrams\Creational Patterns\factory.gif" />
     <Content Include="Class Diagrams\Creational Patterns\prototype.gif" />
     <Content Include="Class Diagrams\Structural Patterns\Bridge.png" />
+    <Content Include="Class Diagrams\Structural Patterns\proxy.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
